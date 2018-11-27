@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Validador de Correo";
+}
+
+<div class="row ">
+
+    @using (Html.BeginForm("validarEmail", "Home", FormMethod.Post))
+    {
+
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Correo">
+            <small id="emailHelp" class="form-text text-muted">Este programa verifica que ingrese un correo valido</small>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Enviar">
+
+        <br>
+        <br>
+        @ViewBag.Mensaje
+    }
+
+    @using (Html.BeginForm("validarUrl", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            <input class="form-control form-control-lg" name="url" type="text" placeholder="ingresa una url">
+            <small id="urlHelp" class="form-text text-muted">Este programa verifica que ingrese una url valida</small>
+        </div>
+
+        <input class="btn btn-primary" type="submit" value="Enviar">
+
+        <br>
+        <br>
+        @ViewBag.Mensaje2
+
+    }
+
+</div>
+   
